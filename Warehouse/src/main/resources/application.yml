@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    #driver-class-name: org.h2.Driver
+    url: jdbc:mysql://localhost:3306/fenix-warehouse?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      #ddl-auto: create-drop
+      ddl-auto: update
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        # Show all queries
+        show_sql: false
+        use_sql_comments: false
+        format_sql: false
+  data:
+    rest:
+      basePath: /warehouse
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+
+vectalia:
+  alicante:
+    api:
+      url: https://alicante.vectalia.es/ajax/microsite
+      path:
+        estimateStop: /isae-estimate-by-stop
+
+server:
+  port: 0
