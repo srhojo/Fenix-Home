@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    platform: h2
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        # Show all queries
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+vectalia:
+  alicante:
+    api:
+      url: https://alicante.vectalia.es/ajax/microsite
+      path:
+        estimateStop: /isae-estimate-by-stop

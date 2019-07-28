@@ -4,17 +4,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.srhojo.fenix</groupId>
-    <artifactId>microservices</artifactId>
+    <artifactId>users-microservice</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
-    <name>Microservices</name>
+    <name>Users Microservice</name>
     <url>https://github.com/srhojo/Fenix-Microservices</url>
-    <description>Fenix Microservices</description>
+    <description>User Microservice</description>
 
     <modules>
-        <module>Users-Microservice</module>
-        <module>Warehouse</module>
+        <module>users-client</module>
+        <module>users</module>
     </modules>
 
 </project>
